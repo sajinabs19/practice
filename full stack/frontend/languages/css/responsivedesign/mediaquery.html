@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><u>Media Query</u></h1>
+    <p>Media queries allow you to apply CSS styles depending on a device's general type (such as print vs. screen) or other characteristics such as screen resolution or browser viewport width. 
+        Media queries are used for the following: To conditionally apply styles with the CSS @media and @import at-rules</p>
+       <h1> CSS2 Introduced Media Types:</h1>
+       <p>
+        The @media rule, introduced in CSS2, made it possible to define different style rules for different media types.
+        
+        Examples: You could have one set of style rules for computer screens, one for printers, one for handheld devices, one for television-type devices, and so on.
+        
+        Unfortunately these media types never got a lot of support by devices, other than the print media type.</p>
+        <h1>CSS3 Introduced Media Queries</h1>
+Media queries in CSS3 extended the CSS2 media types idea: Instead of looking for a type of device, they look at the capability of the device.
+
+Media queries can be used to check many things, such as:
+<ul>
+<li>width and height of the viewport</li>
+<li>width and height of the device</li>
+<li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
+<li>resolution</li>
+</ul>
+Using media queries are a popular technique for delivering a tailored style sheet to desktops, laptops, tablets, and mobile phones (such as iPhone and Android phones).
+        
+    <style>
+    .itm1{
+        font-size: 40px;
+        color: white;
+        background-color: brown;
+        display: none;
+    }
+    @media (max-width:300px)
+    { #item1{
+              display: block;
+              background-color: blue;
+    }
+
+    }
+
+@media (min-width: 301px) and (max-width:500px)
+    { #item2{
+              display: block;
+              background-color: rgb(255, 0, 144);
+    }
+
+    }
+    @media (min-width: 501px) and (max-width:900px) 
+    { #item3{
+              display: block;
+              background-color: rgb(47, 176, 141);
+    }
+
+    }   
+    
+    @media (min-width: 901px) 
+    { #item4{
+              display: block;
+              background-color: rgb(146, 176, 47);
+    }
+
+    }   
+
+</style>
+    <div  id="item1" class="itm1">device name small devices szife of 0px to 300px </div>
+    <div  id="item2" class="itm1">device name  tabs szife of 301px to 500px </div>
+    <div  id="item3" class="itm1">device name  desktop szife of 501px to 900px </div>
+    <div  id="item4" class="itm1">device name large devices szife of 901px to --px </div>
+</body>
+</html>

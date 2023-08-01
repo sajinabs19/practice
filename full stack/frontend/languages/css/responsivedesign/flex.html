@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(13, 72, 149);">
+    <h1 style="color: aliceblue;"><u>Flex </u></h1>
+    <p style="color: aliceblue;">The flex CSS shorthand property is the combination of flex-grow, flex-shrink, and flex-basis properties. 
+        It is used to set the length of flexible items. The flex property is much more responsive and mobile-friendly.
+         It is easy to position child elements and the main container.
+         The flexbox properties are supported in all modern browsers.</p>
+         <h1 style="color: aliceblue;"><u> Flex-wrap Property</u></h1>
+         <p style="color: aliceblue;">The flex-wrap property specifies whether the flex items should wrap or not.
+            The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines.
+             If wrapping is allowed, it sets the direction that lines are stacked.</p>
+        
+         
+    <style>
+        #container{
+            color: aqua;
+            height: 550px;
+            border: 2px solid brown;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            margin: 20px;
+        }
+    </style>
+    <div id="container">
+        <h1 id="box1" class="item">box1</h1>
+        <h1 id="box1" class="item">box2</h1>
+        <h1 id="box1" class="item">box3</h1>
+        <h1 id="box1" class="item">box4</h1>
+    </div>
+</body>
+</html>
