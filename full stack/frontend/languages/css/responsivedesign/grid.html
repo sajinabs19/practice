@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><u>GRID LAYOUT</u></h1>
+    <p>
+        In Cascading Style Sheets, CSS grid layout or CSS grid creates complex responsive web design grid layouts more easily and consistently across browsers. 
+        Historically, there have been other methods for controlling web page layout methods, such as tables, floats, and more recently, CSS Flexible Box Layout
+    </p>
+    <a style="font-size: 35px;" href="./gridimage.html">Grid images</a>
+    <h1>Difference between flex and grid </h1>
+    <p>Grid utilizes a two-dimensional system that allows placing items in rows and columns, making it easier to create complex layouts. 
+        On the other hand, Flexbox is a one-dimensional system that works with elements placed in a linear order</p>
+     <style>
+        .item{
+             background-color: aqua;
+             color: brown;
+             margin: 20px;
+             font-size: 40px;
+             border: 2px solid black;
+           }
+           .container{
+            display: grid;
+            grid-template-columns:repeat(auto-fill,minmax(200px,1fr) ) ;
+            grid-template-rows: repeat(3,200px);
+           }
+</style>
+ <div class="container">
+ <div id="item1" class="item">box1</div>
+<div id="item1" class="item">box2</div>    
+<div id="item1" class="item">box3</div>    
+<div id="item1" class="item">box4</div>  
+<div id="item1" class="item">box5</div>  
+<div id="item1" class="item">box6</div> 
+</div>
+</body>
+</html>
