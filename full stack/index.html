@@ -9,17 +9,44 @@
             background-image: url(./gimg.jpeg);
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
 </head>
 <body>
-    <H1><U>FULLSTACK</U></H1>
-    <p>Full stack development refers to the end-to-end application software development, including the front end and back end. 
-        The front end consists of the user interface, and the back end takes care of the business logic and application workflows.</p>
-    <h3> Full stack consist three parts </h3> 
-    <ul>
-        <li>Frontend</li>
-        <li>Backend</li>
-        <li>Databases</li>
-    </ul>
-    <a href="./frontend/index.html">FRONTEND</a>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"> <H1 style="color: cornflowerblue;"><U>FULLSTACK</U></H1></div>
+            <div class="col"></div>
+        </div>
+
+        <p class="d-inline-flex gap-1">
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Fullstack
+            </a>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+              Three parts
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body" style="color: cornflowerblue;">
+                Full stack development refers to the end-to-end application software development, including the front end and back end. 
+                The front end consists of the user interface, and the back end takes care of the business logic and application workflows. 
+            </div>
+            </div>
+            <div class="collapse" id="collapseExample1">
+            <div class="card card-body" style="color: cornflowerblue;">
+                <ul>
+                   <li> <a href="./frontend/index.html">FRONTNEND</a></li>
+                    <li><a href="">BACKEND</a></li>
+                    <LI><a href="">DATABASES</a></LI>
+                </ul>
+            </div>
+          </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
 </body>
 </html>
