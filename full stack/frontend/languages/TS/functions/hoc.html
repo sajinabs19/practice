@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HOC Function</h1>
+    <p>
+    Higher-order components or HOC is the advanced method of reusing the component functionality logic. 
+    It simply takes the original component and returns the enhanced component
+    It is also known as HOC. In React, HOC is an advanced technique for reusing component logic. It is a function that takes a component and returns a new component. 
+    According to the official website, it is not the feature(part) in React API, but a pattern that emerges from React compositional nature. 
+    They are similar to JavaScript functions used for adding additional functionalities to the existing component.
+
+A higher order component function accepts another function as an argument.
+ The map function is the best example to understand this. 
+ The main goal of this is to decompose the component logic into simpler and smaller functions that can be reused as you need.
+ //Function Creation  
+ function add (a, b) {  
+   return a + b  
+ }  
+ function higherOrder(a, addReference) {  
+   return addReference(a, 20)  
+ }  
+ //Function call  
+ higherOrder(30, add) // 50  
+
+</p>
+</body>
+</html>
