@@ -1,6 +1,7 @@
 let div=document.getElementById("root")
 
 
+
 let myproducts=[{name: "Dijital watch",Image:'./1.jpeg'},
                 {name:"Dijital watch",image:"./2.jpeg"},
                 {name:"head phone",image:"./3.jpeg"} ,
@@ -21,7 +22,8 @@ let myproducts=[{name: "Dijital watch",Image:'./1.jpeg'},
                 image1.src="./1.jpeg"
                 image1.style.width="250px"
                 div.appendChild(image1)
-               
+                
+               //div.innerHTML="Dijital Watch"
 
                 
                 let image2=document.createElement('img')
@@ -73,6 +75,9 @@ let myproducts=[{name: "Dijital watch",Image:'./1.jpeg'},
                 }
 
                 )
+                
+
+
 
                 
             }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>GENERICS</h1>
+    <P>
+        Generics allow creating 'type variables' which can be used to create classes, functions & type aliases that don't need to explicitly define the types that they use.
+         Generics makes it easier to write reusable code.
+         class NamedValue<T> {
+            private _value: T | undefined;
+          
+            constructor(private name: string) {}
+          
+            public setValue(value: T) {
+              this._value = value;
+            }
+          
+            public getValue(): T | undefined {
+              return this._value;
+            }
+          
+            public toString(): string {
+              return `${this.name}: ${this._value}`;
+            }
+          }
+          
+          let value = new NamedValue<number>('myNumber');
+          value.setValue(10);
+          console.log(value.toString()); // myNumber: 10
+    </P>
+</body>
+</html>

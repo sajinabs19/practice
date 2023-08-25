@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="time">DIGITAL WATCH</h1>
+    <script>
+        let time=document.getElementById("time")
+        function digitalWatch()
+        {
+            let sec=0;
+            let min=0;
+            let hrs=0;
+            setInterval(()=>{
+                sec++;
+                if(sec==60)
+                {
+                    min++;
+                    sec=0;
+                }
+                else if(min==60)
+                {
+                  hrs++;
+                  min=0
+                }
+                time.innerHTML=`hours:${hrs}:minutes:${min}:second:${sec}`},1000)
+
+            
+        }
+        digitalWatch()
+    </script>
+</body>
+</html>
