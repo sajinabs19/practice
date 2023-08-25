@@ -1,12 +1,22 @@
-<script>
-let num=[3,3,2,2,9,9,1,1];
-console.log(num)
-
-
-let reduceArray = num.reduce((unique,item)=> (unique.includes(item) ? unique : [...unique, item]),[]);
-
-
-console.log(reduceArray);
-
-
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=[3,3,2,2,9,9,1,1];
+        console.log(num)
+        
+        
+        let reduceArray = num.reduce((unique,item)=> (unique.includes(item) ? unique : [...unique, item]),[]);
+        
+        
+        console.log(reduceArray);
+        
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <button onclick="apicaller()">onclick</button>
+    <script>
+        async function apicaller()
+        {
+            let div=document.getElementById("root")
+            let apidata=fetch("https://jsonplaceholder.typicode.com/comments");
+             apidata= await (await apidata).json();
+             //console.log(apidata);
+             apidata.map((item)=>{
+                let d1=document.createElement('d1');
+                let d2=document.createElement('d2');
+                let d3=document.createElement('d3');
+                let d4=document.createElement('d4');
+                let d5=document.createElement('d5');
+         
+               d1.innerHTML=`postId : ${item.postId}`
+                d2.innerHTML=`id : ${item.id}`
+                d3.innerHTML=`name : ${item.name}`
+                d4.innerHTML=`email : ${item.email}`
+               d5.innerHTML=`body : ${item.body}`
+
+                div.appendChild(d1);
+                div.appendChild(d2);
+                div.appendChild(d3);
+                div.appendChild(d4);
+                div.appendChild(d5);
+
+
+             })
+           console.log(apidata);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let p1=250;
+        let p2=new promise((res,not)=>{setTimeout(()=>{res(250)},2000)})
+        let p3=250;
+        p2.then ((per2)=>{let total=p1+p2+p3
+        console.log(total)
+        })
+    </script>
+
+</body>
+</html>

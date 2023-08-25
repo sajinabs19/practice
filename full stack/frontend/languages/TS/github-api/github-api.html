@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <table >
+        <thead>
+            <tr>
+                
+                <th>ID</th>
+                <th>URL</th>
+                <th>Profile</th>
+                <th>Avatar</th>
+            </tr>
+        </thead>
+    </table>
+    <div id="root"></div>
+    <button onclick="apicaller()">click me</button>
+   
+    <script>
+
+        async function apicaller()
+        {
+            let div=document.getElementById("root")
+           let apiData=fetch("https://api.github.com/users")
+           
+           
+            apiData=await (await apiData).json();
+            var temp="";
+            apiData.map((item)=>{
+                let img=document.createElement('img');
+                img.src=item.avatar_url;
+                
+                
+                img.style.width='40%';
+                
+              //creating anchor element for linking to github profile  
+                let profilelink=document.createElement('a');
+                profilelink.href=item.html_url;
+                profilelink.target="_blank";
+                
+             let h1= document.createElement('h1')  ;
+             let h2= document.createElement('h2')  ;
+             let h3= document.createElement('h3')  ;
+             let h4= document.createElement('h4')  ;
+             profilelink.textContent=`profile : ${item.login}`;
+             h1.innerHTML=`id : ${item.id}` ;
+             img.innerHTML= img ;
+             h3.innerHTML=   `url : ${item.url}` ;
+             h4.innerHTML= `repos_url : ${item.repos_url}`;
+            
+             //div.appendChild(h1);
+            
+
+             
+             
+
+             let table=document.querySelector('table');
+             let nerow=table.insertRow(-1);
+             let idcell=nerow.insertCell(0);
+             let urlcell=nerow.insertCell(1);
+             let profilecell=nerow.insertCell(2);
+             let avatarcell=nerow.insertCell(3);
+             
+             
+             
+             
+             idcell.appendChild(h2);
+             profilecell.appendChild(profilelink);
+             urlcell.appendChild(h3);
+             avatarcell.appendChild(img);
+            })
+           console.log(apiData) 
+        }
+    </script>
+</body>
+</html>

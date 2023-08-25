@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop watch</title>
+</head>
+<body>
+    <center>
+    <h1>STOP WATCH</h1>
+    <h1 id="display">00:00:00</h1>
+    <button  id="start">START</button>
+    <button  id="stop">STOP</button>
+    <button id="reset">RESET</button>
+
+</center>
+<script>
+let startTime;
+let intervalId;
+let running=false;
+
+function startTimer()
+{
+    if(!running)
+    {
+        startTime = Date.now() - (startTime ? startTime : 0);
+        intervalId=setInterval(updateTime,1000);
+        running=true;
+
+    }
+
+}
+
+function stopTimer()
+{
+    clearInterval(intervalId);
+running=false;
+
+}
+function resetTimer()
+{
+    clearInterval(intervalId);
+    running=false;
+    startTime=undefined;
+    updateTime();
+}
+
+function updateTime()
+{
+    if(startTime)
+    {
+    let currentTime = Date.now() - startTime;
+const hours=Math.floor(currentTime/3600000);
+const minutes=Math.floor((currentTime%3600000)/60000);
+const seconds=Math.floor((currentTime%60000)/1000);
+const display = document.getElementById('display');
+display.innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+}
+
+const startButton = document.getElementById('start');
+    const stopButton = document.getElementById('stop');
+    const resetButton = document.getElementById('reset');
+
+    startButton.addEventListener('click', startTimer);
+    stopButton.addEventListener('click', stopTimer);
+    resetButton.addEventListener('click', resetTimer);
+</script>
+
+
+</body>
+</html>

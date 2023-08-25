@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Billing</title>
+</head>
+<body>
+   <script>
+    async function Billing()
+    {
+    let p1=250;
+    let p2=new Promise((res,not)=>{
+        setTimeout(()=>{res(250)},2000)
+    })
+    let p3=250;
+    p2=await p2;
+    let total=p1+p2+p3;
+    console.log(total);
+    }
+    Billing();
+   </script> 
+</body>
+</html>

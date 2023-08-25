@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <button onclick="apicaller()">on click</button>
+    <script>
+        async function apicaller()
+        {
+            let div=document.getElementById("root")
+            let apidata=fetch("https://pokeapi.co/api/v2/pokemon/")
+            apidata=await(await apidata).json();
+            console.log(apidata)
+            apidata.results.forEach(item => {
+                    let d1 = document.createElement('div');
+                    let d2 = document.createElement('div');
+                    
+                
+                d1.innerHTML=`name : ${item.name}`;
+                d2.innerHTML = `<a href="${item.url}">Details</a>`;
+                 div.appendChild(d1)  
+                 div.appendChild(d2) 
+
+            })
+           console.log(apidata);
+        }
+    </script>
+</body>
+</html>
