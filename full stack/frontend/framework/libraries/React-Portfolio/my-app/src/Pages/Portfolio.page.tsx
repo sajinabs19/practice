@@ -3,7 +3,11 @@ import { MyNavbar } from "../Component/MyNavbar.com"
 import { MyImage } from "../Component/MyImage.com"
 import Resume from '../Images/Resume.pdf'
 import { MyProjectCard } from "../Component/MyProjectCard.com"
-import { MyProjectCard2 } from "../Component/MyProjectard2"
+import { MyProjectCard2 } from "../Component/MyProjectCard2"
+import { MyProjectCard3 } from "../Component/MyProjectCard3"
+import { MyProjectCard4 } from "../Component/MyProjectCard4.com"
+import { MyProjectCard5 } from "../Component/MyProjectCard5.com"
+import { MyProjectCard6 } from "../Component/MyProjectCard6.com"
 
 export const Portfolio:React.FC<{}>=()=>{
     return<>
@@ -12,6 +16,8 @@ export const Portfolio:React.FC<{}>=()=>{
         <MyNavbar/>
      </Grid>
      <br/>
+     <br/>
+     <br/><br/><br/><br/>
      <Grid
         container
         direction="row"
@@ -39,11 +45,18 @@ Led projects like Library Management,Lab Assetmanagement for School.<br/><br/>
      <MyProjectCard2/>
      </Grid>
      < Grid item xs={6}>
-     <MyProjectCard/>
+     <MyProjectCard3/>
      </Grid>
      < Grid item xs={6}>
-     <MyProjectCard/>
+     <MyProjectCard4/>
      </Grid>
+     < Grid item xs={6}>
+     <MyProjectCard5/>
+     </Grid>
+     < Grid item xs={6}>
+     <MyProjectCard6/>
+     </Grid>
+
      </Grid>
     </Box>
     </>
