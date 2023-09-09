@@ -6,9 +6,12 @@ export const MyUseEffect:React.FC<{}>=()=>{
 
  useEffect(()=>{
      (async()=>{
+        
          let data1= await flipkartApi()
          setData(data1)
          console.log("-->inside",data1)
+        
+     
       })()
  },[]);
 

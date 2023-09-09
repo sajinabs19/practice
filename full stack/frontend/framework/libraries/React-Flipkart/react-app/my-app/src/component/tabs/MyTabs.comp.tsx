@@ -13,6 +13,7 @@ import { MyAvatar } from '../Avata/MyAvatar.comp';
 import { MyFragment } from '../fragment/MyFragment.comp';
 import { MyuseStateHook } from '../hook/MyuseStateHook.comp';
 import { TwowaysofCss } from '../2waysofcss/TwowaysofCss.comp';
+import { MyUseEffect } from '../hook/MyUseEffect.comp';
  export let MyTabs:React.FC<{}>=()=>{
    const [value, setValue] = React.useState('1');
 
@@ -43,7 +44,7 @@ import { TwowaysofCss } from '../2waysofcss/TwowaysofCss.comp';
  <MyAvatar/>
          </TabPanel>
          <TabPanel value='4'><MyFragment/></TabPanel>
-         <TabPanel value="5"><h1>hookes</h1><MyuseStateHook/></TabPanel>
+         <TabPanel value="5"><h1>hookes</h1><MyuseStateHook/><MyUseEffect/></TabPanel>
          <TabPanel value='6'><h1>Two ways of CSS</h1></TabPanel>
          <TwowaysofCss/>
  
