@@ -15,22 +15,22 @@ const bull = (
   </Box>
 );
 
-export const MyProjectCard2:React.FC<{}>=()=>{
+export const MyProjectCard5:React.FC<{}>=()=>{
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          <h1>Learning Point</h1>
+          <h1>Stop Watch</h1>
         </Typography>
         <Typography variant="h5" component="div">
-          <h6>Complete information about fullstack development that is frontend ,backend and data bases.</h6>
+          <h6>
+          It is model of stop watch.it holds three buttons start,stop,reset.It shows hours ,minutes and seconds</h6>
         
         </Typography>
       </CardContent>
       <CardActions>
-        <a href= 
-        "https://sajinabs19.github.io/practice/">
-        <Button size="small">uuuu</Button></a>
+        <a href="https://sajinabs19.github.io/practice/full%20stack/frontend/languages/TS/project/digital%20watch/stopwatch.html">
+        <Button variant='contained' size="small">Click here</Button></a>
       </CardActions>
     </Card>
   );

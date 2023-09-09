@@ -1,6 +1,3 @@
-
-
-
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -18,22 +15,23 @@ const bull = (
   </Box>
 );
 
-export const MyProjectCard:React.FC<{}>=()=>{
+export const MyProjectCard3:React.FC<{}>=()=>{
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          <h1>Flipkart demo</h1>
+          <h1>Dynamic Calculator</h1>
         </Typography>
         <Typography variant="h5" component="div">
-          <h6>Model of flipkart home page.This demo page is created using React and MUI.
-            The components used in this project is navbar,carousel and cards.</h6>
+          <h6>It is a model of dynamic calculator.
+             In this calculator we can do addition,subtraction,multiplication and division.
+             Delete and Clear button also added in this.</h6>
         
         </Typography>
       </CardContent>
       <CardActions>
-        <a href="https://sajinabs19.github.io/practice/full%20stack/frontend/languages/TS/project/flipkartdemo.html">
-        <Button variant='contained' size="small" >Click here</Button></a>
+        <a href="https://sajinabs19.github.io/practice/full%20stack/frontend/languages/TS/project/dynamiccalc.html">
+        <Button variant='contained' size="small">Click here</Button></a>
       </CardActions>
     </Card>
   );
